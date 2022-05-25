@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 import * as C from './style'
+import { Header } from '../Header'
 
-type Props {
+type Props = {
   children: ReactNode
 }
 
@@ -14,7 +15,7 @@ export const Theme = ({ children }: Props) => {
 
         <C.Steps>
           <C.Sidebar>
-
+            Sidebar
           </C.Sidebar>
           <C.Page>
             { children }
