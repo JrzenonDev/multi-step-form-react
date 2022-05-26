@@ -6,18 +6,23 @@ import { ChangeEvent, useEffect } from 'react'
 
 export const FormStep1 = () => {
 
-  const { state, dispatch } = useForm()
   const history = useHistory()
+  const { state, dispatch } = useForm()
 
   useEffect(() => {
     dispatch({
       type: FormActions.setCurrentStep,
       payload: 1
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleNextStep = () => {
-    history.push('/step2')
+    if (state.name !== '') {
+      history.push('/step2')
+    } else {
+      alert('O campo nome não pode ser vazio.')
+    }
   }
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
