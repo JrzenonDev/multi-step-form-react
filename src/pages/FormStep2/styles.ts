@@ -50,4 +50,11 @@ export const Container = styled.div`
     margin-top: 30px;
     outline: 0;
   }
+
+  .backButton {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 20px 40px;
+    color: #b8b8d4;
+  }
 `
