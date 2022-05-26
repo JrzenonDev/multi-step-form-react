@@ -13,10 +13,16 @@ export const FormStep2 = () => {
   const history = useHistory()
 
   useEffect(() => {
-    dispatch({
-      type: FormActions.setCurrentStep,
-      payload: 2
-    })
+
+    if (state.name === '') {
+      history.push('/')
+    } else {
+      dispatch({
+        type: FormActions.setCurrentStep,
+        payload: 3
+      })
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
