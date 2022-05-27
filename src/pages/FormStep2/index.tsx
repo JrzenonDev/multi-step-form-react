@@ -17,7 +17,7 @@ export const FormStep2 = () => {
     } else {
       dispatch({
         type: FormActions.setCurrentStep,
-        payload: 3
+        payload: 2
       })
     }
 
@@ -27,8 +27,6 @@ export const FormStep2 = () => {
   const handleNextStep = () => {
     if (state.name !== '') {
       history.push('/step3')
-    } else {
-      alert('O campo nome não pode ser vazio.')
     }
   }
 
