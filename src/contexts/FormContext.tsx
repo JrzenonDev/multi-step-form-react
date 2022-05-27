@@ -2,10 +2,10 @@ import { createContext, ReactNode, useContext, useReducer } from 'react'
 
 type State = {
   currentStep: Number
-  name: String
+  name: String | any
   level: 0 | 1
-  email: String
-  github: String
+  email: String | any
+  github: String | any
 }
 
 type Action = {
